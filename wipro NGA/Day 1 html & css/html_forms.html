@@ -1,0 +1,40 @@
+<!-- IN HTML we Use Forms for collecting user input as well as for user authentication -->
+<!-- Ex registration form
+  Login Form with authentication & Authorization 
+  Steps for IMPLEMENTING html FORMS 
+  STEP 1:  CREATE A SAMPLE html APPLICATION 
+  STEP 2:  ADD FORM ELEMENTS LIKE INPUT, SELECT, TEXTAREA, BUTTONS ETC
+  STEP 3:  ADD FORM ATTRIBUTES LIKE ACTION, METHOD ETC Get / post
+  STEP 4:  TEST THE FORM IN BROWSER-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>types of forms</title>
+    </head>
+    <body>
+        <h1>Please sign in</h1>
+        <form action="/submit_form" method="post">
+            <label for="name">Fist Name</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lname" requered><br><br>
+            
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="gender">Gender</label><br>
+            <select id="gender" name="gender">
+                <option value="">--select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select><br><br>
+
+            <button type="submit" style="background-color : blue; color : white;">submit</button>
+        </form>
+    </body>
+</html>
