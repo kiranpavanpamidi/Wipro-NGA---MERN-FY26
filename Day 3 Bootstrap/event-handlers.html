@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum dolorem quaerat rerum vero alias culpa corrupti quisquam suscipit doloremque labore explicabo nemo ipsum dolor officiis, eius in, blanditiis aut?</p>
+    <button onclick="HandleClick();">Click here</button>
+    <script >
+        window.onload = function(){
+            alert('The Page is Load');
+        };
+
+        function HandleClick(){
+            alert("You have clicked");
+        };
+        document.querySelector('button').onclick = handleClick;
+        document.getEelementById("para-1").onmouseover = function(){
+            console.log('mouse is over para')
+        };
+        
+    </script>
+</body>
+</html>

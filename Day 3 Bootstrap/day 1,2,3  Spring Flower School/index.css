@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.navbar-brand img {
+    height: 40px;
+    }
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+#authSection, #studentProfile, #timeTable, #monthlyActivities {
+  display: none;
+}
+
+input, select, button {
+  margin: 5px 0;
+}
+
+.table {
+    margin: 0 auto;
+    width: 70%;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .table {
+        width: 100%;
+    }
+    main {
+        padding: 20px;
+    }
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}

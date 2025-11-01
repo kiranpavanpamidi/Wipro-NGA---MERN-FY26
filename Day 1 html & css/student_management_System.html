@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management System (ES6)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      margin: 20px;
+    }
+    h2 {
+      color: #0077cc;
+    }
+    .student-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎓 Student Management System (ES6 Demo)</h2>
+  <div id="course-info"></div>
+  <hr>
+  <h3>Students:</h3>
+  <div id="student-list"></div>
+  <button id="add-student">Add New Student</button>
+
+  <script>
+    // --- CLASS DEFINITIONS (using ES6 classes) ---
+    class Student {
+      constructor(name, age, subjects, grades, skills) {
+        this.name = name;
+        this.age = age;
+        this.subjects = subjects;
+        this.grades = new Map(grades); // Map for subject-grade pairs
+        this.skills = new Set(skills); // Set for unique skills
+      }
+
+      getAverageGrade = () => {
+        let total = 0;
+        for (let grade of this.grades.values()) total += grade;
+        return (total / this.grades.size).toFixed(2);
+      }
+
+      displayInfo = () => {
+        return `
+          <div class="student-card">
+            <h4>${this.name} (Age: ${this.age})</h4>
+            <p><strong>Subjects:</strong> ${this.subjects.join(", ")}</p>
+            <p><strong>Grades:</strong> ${[...this.grades.entries()].map(([s, g]) => `${s}: ${g}`).join(", ")}</p>
+            <p><strong>Average:</strong> ${this.getAverageGrade()}</p>
+            <p><strong>Skills:</strong> ${[...this.skills].join(", ")}</p>
+          </div>
+        `;
+      }
+    }
+
+    class Course {
+      constructor(courseName, instructor, students = []) {
+        this.courseName = courseName;
+        this.instructor = instructor;
+        this.students = students;
+      }
+
+      addStudent = (student) => {
+        this.students = [...this.students, student]; // Spread operator
+      }
+
+      displayCourseInfo = () => `
+        <p><strong>Course:</strong> ${this.courseName}</p>
+        <p><strong>Instructor:</strong> ${this.instructor}</p>
+        <p><strong>Total Students:</strong> ${this.students.length}</p>
+      `
+    }
+
+    // --- INITIAL DATA ---
+    const s1 = new Student("Alice", 20, ["Math", "Physics"], [["Math", 85], ["Physics", 90]], ["JavaScript", "Teamwork"]);
+    const s2 = new Student("Bob", 22, ["Chemistry", "Biology"], [["Chemistry", 78], ["Biology", 82]], ["Python", "Leadership"]);
+
+    const course = new Course("B.Tech Computer Science", "Dr. Ramesh", [s1, s2]);
+
+    // --- DOM HANDLING FUNCTIONS ---
+    const courseInfoDiv = document.getElementById("course-info");
+    const studentListDiv = document.getElementById("student-list");
+
+    const renderCourseInfo = () => courseInfoDiv.innerHTML = course.displayCourseInfo();
+    const renderStudents = () => studentListDiv.innerHTML = course.students.map(s => s.displayInfo()).join("");
+
+    // Initial render
+    renderCourseInfo();
+    renderStudents();
+
+    // --- EVENT HANDLER: Add new student ---
+    document.getElementById("add-student").addEventListener("click", () => {
+      const newStudent = new Student(
+        "Charlie",
+        21,
+        ["Math", "CS"],
+        [["Math", 88], ["CS", 92]],
+        ["React", "Problem Solving"]
+      );
+      course.addStudent(newStudent);
+      renderStudents();
+      renderCourseInfo();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+[
+  {"id":1,"title":"Startup Pitch Night","category":"Business","date":"2025-11-10","location":"Coastal Hall"},
+  {"id":2,"title":"Photography Walk","category":"Art","date":"2025-11-07","location":"Old Town"},
+  {"id":3,"title":"Coding Bootcamp","category":"Education","date":"2025-11-21","location":"Tech Park"},
+  {"id":4,"title":"Live Jazz Night","category":"Music","date":"2025-12-01","location":"City Arena"}
+]
