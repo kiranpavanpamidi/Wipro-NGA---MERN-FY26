@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click me</button>
+    <a href="https://www.google.com">google search page</a>
+    <script>
+        document.querySelecter('button').addEventListener('click',function(event){
+            console.log(event); 
+        });
+        document.querySelecter('a').addEventListener('click',function(event){
+            if(conform( 'Are you sure you want to leave my beautiful wbsite')){
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

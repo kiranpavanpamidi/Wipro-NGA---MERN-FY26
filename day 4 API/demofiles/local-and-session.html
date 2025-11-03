@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter your favorite color:<input type="text" id="favorite-color"/>
+    enter you favorite city:<input type="text" id="favorite-city"/>
+    enter you favorite game:<input type="text" id="favorite-game"/>
+</body>
+<script>
+    document.querySelector('#favorite-color').addEventListener('input',function(){
+        favoriteColor = this.value;
+        document.body.style.backgroundColor = favoriteColor;
+        localStorage.setItem('favorite',json.stringify({color: favoriteColor,city: favoritecity}));
+        
+    });
+    document.querySelector('#favorite-city').addEventListener(input,function(){
+        favoritecity = this.value;
+        localStorage.setItem('favorite',json.stringify({color: favoriteColor,city: favoritecity,}));
+    });
+    document.querySelector('#favorite-game').addEventListener('input',function(){
+        sessionStorage.setItem('favorite-Game',this.value);
+    });
+</script>
+</html>
