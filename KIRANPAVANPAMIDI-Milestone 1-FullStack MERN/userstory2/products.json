@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Smartphone",
+    "category": "electronics",
+    "price": 70000
+  },
+  {
+    "name": "Headphones",
+    "category": "electronics",
+    "price": 8000
+  },
+  {
+    "name": "T-Shirt",
+    "category": "fashion",
+    "price": 699
+  },
+  {
+    "name": "Sofa",
+    "category": "home",
+    "price": 49999
+  }
+]
