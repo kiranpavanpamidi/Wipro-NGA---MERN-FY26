@@ -1,0 +1,13 @@
+create database practice_db;
+use practice_db;
+create table student (id int,name varchar(20));
+insert into student values(1,'kiran'),(2,'pavan'),(3,'ram'),(4,'tejeswar'),(5,'yashwanth');
+select * from student;
+select *from student where id = 3;
+select * from student order by id desc;
+update student set id = 6 where 'name'='ram';
+select * from student;
+SET SQL_SAFE_UPDATES = 0;
+update student set name='ketan' where id = 4;
+delete from student where id=5;
+select * from student;
