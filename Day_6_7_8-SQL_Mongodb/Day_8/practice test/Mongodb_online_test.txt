@@ -1,0 +1,30 @@
+Attempt #1
+Nov 05, 1:08 PM
+Evaluation Pending
+Question 1
+Background:
+
+A leading online retail company is looking to revamp its existing product catalog system. The current system, built on a relational database (like MySQL), is facing scalability challenges as the number of products and customer transactions continues to grow. The company has decided to migrate to MongoDB to leverage its flexible document-based model.
+
+Scenario:
+
+The company's online retail platform manages millions of products, each having various attributes such as name, category, price, and stock availability. Additionally, customer orders, payments, and user accounts are part of the system.
+
+
+Requirements:
+
+Product Catalog:
+Design a MongoDB schema to store product information efficiently.
+Include sample documents representing different types of products.
+ 
+
+Customer Orders:
+Design a MongoDB schema to store customer orders, considering the relationship between orders and products.
+Include sample documents representing orders with details such as order date, products purchased, and total cost.
+User Authentication:
+Design a MongoDB schema to store user account information for authentication purposes.
+Include sample documents representing user accounts with details such as username, email, and hashed passwords.
+Querying and Indexing:
+Propose indexes to optimize common queries, such as retrieving product details by category or finding orders for a specific user.
+Provide sample queries to demonstrate the efficiency of your proposed indexes.
+No file submitted
