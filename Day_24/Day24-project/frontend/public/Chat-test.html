@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Test</title>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+
+<h2>Real-Time Chat</h2>
+
+<input id="msgInput" placeholder="Type message..." />
+<button onclick="sendMessage()">Send</button>
+
+<ul id="chatBox"></ul>
+
+<script>
+  const socket = io("http://localhost:5000");
+
+  socket.on("connect", () => {
+    console.log("Connected:", socket.id);
+  });
+
+  socket.on("message", (msg) => {
+    const li = document.createElement("li");
+    li.textContent = msg;
+    document.getElementById("chatBox").appendChild(li);
+  });
+
+  function sendMessage() {
+    const msg = document.getElementById("msgInput").value;
+    socket.emit("message", msg);
+  }
+</script>
+
+</body>
+</html>
