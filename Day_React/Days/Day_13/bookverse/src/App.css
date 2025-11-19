@@ -1,0 +1,24 @@
+.route-fade {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.book-details {
+  padding: 20px;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
