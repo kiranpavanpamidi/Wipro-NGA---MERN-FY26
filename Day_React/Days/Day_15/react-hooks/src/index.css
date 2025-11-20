@@ -1,0 +1,13 @@
+.light-mode {
+  background: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dark-mode {
+  background: #1e1e1e;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
