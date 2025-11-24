@@ -1,0 +1,25 @@
+{
+  "name": "day23",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --timeout 5000",
+    "coverage": "nyc mocha tests --timeout 5000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chai-http": "^4.3.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^11.7.5",
+    "nyc": "^17.1.0",
+    "supertest": "^7.1.4"
+  }
+}
